@@ -1,0 +1,33 @@
+{
+  "name": "@bunji-saas/bunji-pdf-courrier",
+  "version": "1.0.0",
+  "description": "Package bunji-pdf-courrier",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "yarn run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bunji-saas/bunji-pdf-courrier.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Valentin Crozet",
+    "email": "valentin@bunji.fr"
+  },
+  "engines": {
+    "node": "18.17.1",
+    "yarn": "1.22.22"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bunji-saas/bunji-pdf-courrier/issues"
+  },
+  "homepage": "https://github.com/bunji-saas/bunji-pdf-courrier#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  }
+}
