@@ -2,7 +2,8 @@
   "name": "@bunji-saas/bunji-pdf-courrier",
   "version": "1.0.0",
   "description": "Package bunji-pdf-courrier",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "yarn run build",
