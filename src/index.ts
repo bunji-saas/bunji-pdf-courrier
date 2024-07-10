@@ -1,8 +1,3 @@
-// index.js
-export const greet = (name: string) => {
-  return `Bonjour, ${name}!`;
-};
+import PDF from './generate'
 
-export const add = (a: string, b: string) => {
-      return a + b;
-};
+export default PDF

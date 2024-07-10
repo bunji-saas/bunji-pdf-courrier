@@ -1,12 +1,7 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.add = exports.greet = void 0;
-// index.js
-const greet = (name) => {
-    return `Bonjour, ${name}!`;
-};
-exports.greet = greet;
-const add = (a, b) => {
-    return a + b;
-};
-exports.add = add;
+const generate_1 = __importDefault(require("./generate"));
+exports.default = generate_1.default;
