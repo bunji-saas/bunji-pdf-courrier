@@ -1,15 +1,8 @@
 import React from "react";
-type TemplateData = {
-    companyName: string;
-    companyPhone: string;
-    companyEmail: string;
-    receiptNumber: string;
-    datePaid: string;
-    paymentMethod: string;
-    amount: string;
-};
 interface PDFProps {
-    data: TemplateData;
+    pdfs: PdfProps[];
+    agency: Agency;
+    advSetting: AdvSetting | null;
 }
-declare const PDF: ({ data }: PDFProps) => React.JSX.Element;
+declare const PDF: ({ pdfs, agency, advSetting }: PDFProps) => React.JSX.Element;
 export default PDF;
