@@ -12,7 +12,8 @@ import { remplaceVariables, cleanText } from '../utils/remplace-variables'
 import { createFullName, grey } from '../utils/tool'
 
 const LetterPage = ({ pdf, agency, advSetting}: { pdf: PdfProps, agency: Agency, advSetting: AdvSetting | null}) => {
-    const useStyles = () =>
+    
+  const useStyles = () =>
         useMemo(
           () =>
             StyleSheet.create({
