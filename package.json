@@ -1,0 +1,52 @@
+{
+  "name": "@bunji-saas/bunji-pdf-courrier",
+  "version": "1.0.0",
+  "description": "Package bunji-pdf-courrier",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "yarn run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && npm run copy-fonts",
+    "copy-fonts": "copyfiles -u 1 src/assets/fonts/* dist/",
+    "test-node": "babel-node test.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bunji-saas/bunji-pdf-courrier.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Valentin Crozet",
+    "email": "valentin@bunji.fr"
+  },
+  "engines": {
+    "node": "18.17.1"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bunji-saas/bunji-pdf-courrier/issues"
+  },
+  "homepage": "https://github.com/bunji-saas/bunji-pdf-courrier#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.9",
+    "@babel/node": "^7.24.8",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7",
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^3.4.4",
+    "@types/react": "^18.3.3",
+    "copyfiles": "^2.4.1",
+    "fs": "^0.0.1-security",
+    "moment": "^2.30.1",
+    "path": "^0.12.7",
+    "process": "^0.11.10",
+    "react": "^18.3.1",
+    "react-pdf-html": "^2.0.4"
+  }
+}
