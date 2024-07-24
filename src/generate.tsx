@@ -1,6 +1,6 @@
 // index.js
 import React from "react";
-import { Document, Font } from "@react-pdf/renderer";
+import { Document } from "@react-pdf/renderer";
 
 import LetterPage from "./pdf/letterPage";
 

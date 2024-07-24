@@ -50,7 +50,7 @@ const LetterPage = ({ pdf, agency, advSetting, }) => {
         page: {
             fontSize: 9,
             lineHeight: 1.6,
-            // fontFamily: 'Roboto',
+            fontFamily: "Helvetica",
             backgroundColor: "#FFFFFF",
             padding: "40px 40px 120px 40px",
         },
