@@ -7,8 +7,8 @@ import LetterPage from "./pdf/letterPage";
 Font.register({
   family: "Roboto",
   fonts: [
-    { src: `../assets/fonts/Roboto-Regular.ttf` },
-    { src: `../assets/fonts/Roboto-Bold.ttf`, fontWeight: "bold" },
+    { src: `./assets/fonts/Roboto-Regular.ttf` },
+    { src: `./assets/fonts/Roboto-Bold.ttf`, fontWeight: "bold" },
   ],
 });
 
