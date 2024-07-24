@@ -1,39 +1,35 @@
 // index.js
 import React from "react";
-import  {
-    Document,
-    Font
-} from "@react-pdf/renderer";
+import { Document, Font } from "@react-pdf/renderer";
 
 import LetterPage from "./pdf/letterPage";
 
-
 Font.register({
-    family: 'Roboto',
-    fonts: [
-      { src: `./public/fonts/Roboto-Regular.ttf` },
-      { src: `./public/fonts/Roboto-Bold.ttf`, fontWeight: 'bold' },
-    ],
-  })
+  family: "Roboto",
+  fonts: [
+    { src: `../assets/fonts/Roboto-Regular.ttf` },
+    { src: `../assets/fonts/Roboto-Bold.ttf`, fontWeight: "bold" },
+  ],
+});
 
 interface PDFProps {
-    pdfs: PdfProps[];
-    agency: Agency;
-    advSetting: AdvSetting | null;
+  pdfs: PdfProps[];
+  agency: Agency;
+  advSetting: AdvSetting | null;
 }
 
-const MemoDoc = React.memo(Document)
+const MemoDoc = React.memo(Document);
 
 const PDF = ({ pdfs, agency, advSetting }: PDFProps) => {
-    return (
-        <MemoDoc>
-            {pdfs.map((pdf, index) => (
-                <React.Fragment key={index}>
-                    <LetterPage pdf={pdf} agency={agency} advSetting={advSetting} />
-                </React.Fragment>
-            ))}
-        </MemoDoc>
-    );
+  return (
+    <MemoDoc>
+      {pdfs.map((pdf, index) => (
+        <React.Fragment key={index}>
+          <LetterPage pdf={pdf} agency={agency} advSetting={advSetting} />
+        </React.Fragment>
+      ))}
+    </MemoDoc>
+  );
 };
 
 export default PDF;
