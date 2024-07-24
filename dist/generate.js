@@ -10,8 +10,8 @@ const letterPage_1 = __importDefault(require("./pdf/letterPage"));
 renderer_1.Font.register({
     family: "Roboto",
     fonts: [
-        { src: `../assets/fonts/Roboto-Regular.ttf` },
-        { src: `../assets/fonts/Roboto-Bold.ttf`, fontWeight: "bold" },
+        { src: `./assets/fonts/Roboto-Regular.ttf` },
+        { src: `./assets/fonts/Roboto-Bold.ttf`, fontWeight: "bold" },
     ],
 });
 const MemoDoc = react_1.default.memo(renderer_1.Document);
