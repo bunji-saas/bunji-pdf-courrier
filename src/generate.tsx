@@ -4,14 +4,6 @@ import { Document, Font } from "@react-pdf/renderer";
 
 import LetterPage from "./pdf/letterPage";
 
-Font.register({
-  family: "Roboto",
-  fonts: [
-    { src: `./assets/fonts/Roboto-Regular.ttf` },
-    { src: `./assets/fonts/Roboto-Bold.ttf`, fontWeight: "bold" },
-  ],
-});
-
 interface PDFProps {
   pdfs: PdfProps[];
   agency: Agency;

@@ -1,5 +1,5 @@
-import React from 'react';
-declare const LetterPage: ({ pdf, agency, advSetting }: {
+import React from "react";
+declare const LetterPage: ({ pdf, agency, advSetting, }: {
     pdf: PdfProps;
     agency: Agency;
     advSetting: AdvSetting | null;

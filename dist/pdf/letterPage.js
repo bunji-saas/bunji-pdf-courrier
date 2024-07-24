@@ -32,11 +32,11 @@ const renderer_1 = require("@react-pdf/renderer");
 const footer_1 = __importDefault(require("./footer"));
 const remplace_variables_1 = require("../utils/remplace-variables");
 const tool_1 = require("../utils/tool");
-const LetterPage = ({ pdf, agency, advSetting }) => {
+const LetterPage = ({ pdf, agency, advSetting, }) => {
     const useStyles = () => (0, react_1.useMemo)(() => renderer_1.StyleSheet.create({
-        col4: { width: '25%' },
-        col8: { width: '75%' },
-        col6: { width: '50%' },
+        col4: { width: "25%" },
+        col8: { width: "75%" },
+        col6: { width: "50%" },
         mb4: { marginBottom: 4 },
         mb8: { marginBottom: 8 },
         mb40: { marginBottom: 40 },
@@ -46,26 +46,26 @@ const LetterPage = ({ pdf, agency, advSetting }) => {
         body2: { fontSize: 9 },
         subtitle1: { fontSize: 10, fontWeight: 700 },
         subtitle2: { fontSize: 9, fontWeight: 700 },
-        alignRight: { textAlign: 'right' },
+        alignRight: { textAlign: "right" },
         page: {
             fontSize: 9,
             lineHeight: 1.6,
-            fontFamily: 'Roboto',
-            backgroundColor: '#FFFFFF',
-            padding: '40px 40px 120px 40px',
+            // fontFamily: 'Roboto',
+            backgroundColor: "#FFFFFF",
+            padding: "40px 40px 120px 40px",
         },
         // https://www.mysendingbox.fr/guide/zones-decrasement/
         addressBox: {
-            position: 'absolute',
+            position: "absolute",
             top: 112,
             height: 102,
             width: 276,
-            textAlign: 'left',
+            textAlign: "left",
             lineHeight: 1.6,
             right: 28,
             backgroundColor: tool_1.grey[200],
             // ...(variant === 'preview' && { backgroundColor: grey[200] }),
-            borderRadius: '8px',
+            borderRadius: "8px",
             zIndex: 0,
         },
         address: {
@@ -73,7 +73,7 @@ const LetterPage = ({ pdf, agency, advSetting }) => {
             paddingBottom: 12,
             paddingRight: 11,
             paddingLeft: 28,
-            position: 'absolute',
+            position: "absolute",
             bottom: 0,
             left: 0,
         },
@@ -85,15 +85,15 @@ const LetterPage = ({ pdf, agency, advSetting }) => {
             paddingBottom: 12,
             paddingLeft: 24,
             paddingRight: 24,
-            margin: 'auto',
+            margin: "auto",
             borderTopWidth: 1,
-            borderStyle: 'solid',
-            position: 'absolute',
-            borderColor: '#DFE3E8',
+            borderStyle: "solid",
+            position: "absolute",
+            borderColor: "#DFE3E8",
         },
         gridContainer: {
-            flexDirection: 'row',
-            justifyContent: 'space-between',
+            flexDirection: "row",
+            justifyContent: "space-between",
         },
     }), []);
     const styles = useStyles();
@@ -110,11 +110,13 @@ const LetterPage = ({ pdf, agency, advSetting }) => {
                 react_1.default.createElement(renderer_1.Text, null, pdf.toCountry))),
         react_1.default.createElement(react_pdf_html_1.default, { style: styles.body1, stylesheet: {
                 p: { margin: 0, fontWeight: 400 },
-                strong: { fontWeight: 'bold' },
+                strong: { fontWeight: "bold" },
                 ul: { margin: 0, padding: 0 },
                 li: { margin: 0, padding: 0 },
-                '.ql-align-right': { textAlign: 'right' },
-            } }, pdf.content ? (0, remplace_variables_1.cleanText)((0, remplace_variables_1.remplaceVariables)(pdf.content, pdf, agency, advSetting)) : ''),
+                ".ql-align-right": { textAlign: "right" },
+            } }, pdf.content
+            ? (0, remplace_variables_1.cleanText)((0, remplace_variables_1.remplaceVariables)(pdf.content, pdf, agency, advSetting))
+            : ""),
         react_1.default.createElement(footer_1.default, { agency: agency, advSetting: null })));
 };
 exports.default = LetterPage;
