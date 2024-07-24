@@ -107,7 +107,7 @@ const LetterPage = ({
         style={styles.body1}
         stylesheet={{
           p: { margin: 0, fontWeight: 400 },
-          strong: { fontWeight: "bold" },
+          strong: { fontFamily: "Helvetica-Bold" },
           ul: { margin: 0, padding: 0 },
           li: { margin: 0, padding: 0 },
           ".ql-align-right": { textAlign: "right" },

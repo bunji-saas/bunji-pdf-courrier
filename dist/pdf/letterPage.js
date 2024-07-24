@@ -110,7 +110,7 @@ const LetterPage = ({ pdf, agency, advSetting, }) => {
                 react_1.default.createElement(renderer_1.Text, null, pdf.toCountry))),
         react_1.default.createElement(react_pdf_html_1.default, { style: styles.body1, stylesheet: {
                 p: { margin: 0, fontWeight: 400 },
-                strong: { fontWeight: "bold" },
+                strong: { fontFamily: "Helvetica-Bold" },
                 ul: { margin: 0, padding: 0 },
                 li: { margin: 0, padding: 0 },
                 ".ql-align-right": { textAlign: "right" },
