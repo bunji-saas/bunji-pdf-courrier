@@ -1,8 +1,8 @@
 // index.js
 import React from "react";
 import { Document } from "@react-pdf/renderer";
-
 import LetterPage from "./pdf/letterPage";
+import { AdvSetting, Agency, PdfProps } from './types'
 
 interface PDFProps {
   pdfs: PdfProps[];

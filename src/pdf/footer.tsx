@@ -1,6 +1,7 @@
 import React from "react";
 import { useMemo } from "react";
 import { View, Text, Image, StyleSheet, Font } from "@react-pdf/renderer";
+import { Agency, AdvSetting } from "../types";
 
 export const getAdvSettingInfo = (
   agency: Agency,

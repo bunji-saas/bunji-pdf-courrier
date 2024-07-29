@@ -1,6 +1,7 @@
 import moment from 'moment'
 
 import { courrierPropertyTypesOptions } from './property-types'
+import { Agency, AdvSetting, PdfProps } from '../types'
 
 const roundUpToClosest10 = (number: number) => Math.round(number / 10) * 10
 

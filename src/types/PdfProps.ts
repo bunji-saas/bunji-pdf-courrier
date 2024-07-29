@@ -1,4 +1,4 @@
-declare interface PdfProps {
+interface PdfProps {
   content: string | null
   toCivility:
     | 'mister'
@@ -31,3 +31,5 @@ declare interface PdfProps {
     | 'warehouse'
     | null
 }
+
+export default PdfProps

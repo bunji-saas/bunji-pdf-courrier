@@ -1,4 +1,5 @@
 import React from "react";
+import { AdvSetting, Agency, PdfProps } from './types';
 interface PDFProps {
     pdfs: PdfProps[];
     agency: Agency;

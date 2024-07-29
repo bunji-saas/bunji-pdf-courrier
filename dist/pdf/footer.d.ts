@@ -1,4 +1,5 @@
 import React from "react";
+import { Agency, AdvSetting } from "../types";
 export declare const getAdvSettingInfo: (agency: Agency, advSetting: AdvSetting | null) => {
     agencyName: string;
     agencyAddress: string;

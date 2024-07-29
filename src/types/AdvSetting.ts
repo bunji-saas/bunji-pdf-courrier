@@ -1,4 +1,4 @@
-declare interface AdvSetting {
+interface AdvSetting {
   id: number
   agencyName: string | null
   agencyAddress: string | null
@@ -13,3 +13,5 @@ declare interface AdvSetting {
   estimateHighText: string | null
   userId: number
 }
+
+export default AdvSetting

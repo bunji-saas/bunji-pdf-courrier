@@ -1,3 +1,4 @@
+import { Agency, AdvSetting, PdfProps } from '../types';
 export declare const getAdvSettingInfo: (agency: Agency, advSetting: AdvSetting | null) => {
     agencyName: string;
     agencyAddress: string;

@@ -1,4 +1,4 @@
-declare interface Agency {
+interface Agency {
   id: number
   name: string
   address: string
@@ -15,3 +15,5 @@ declare interface Agency {
   isStripeEnabled: boolean
   hasStripePaymentMethod: boolean
 }
+
+export default Agency

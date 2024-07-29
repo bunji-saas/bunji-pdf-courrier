@@ -117,6 +117,6 @@ const LetterPage = ({ pdf, agency, advSetting, }) => {
             } }, pdf.content
             ? (0, remplace_variables_1.cleanText)((0, remplace_variables_1.remplaceVariables)(pdf.content, pdf, agency, advSetting))
             : ""),
-        react_1.default.createElement(footer_1.default, { agency: agency, advSetting: null })));
+        react_1.default.createElement(footer_1.default, { agency: agency, advSetting: advSetting })));
 };
 exports.default = LetterPage;

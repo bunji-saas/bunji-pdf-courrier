@@ -5,7 +5,7 @@ import { Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 import Footer from "./footer";
 import { remplaceVariables, cleanText } from "../utils/remplace-variables";
 import { createFullName, grey } from "../utils/tool";
-
+import { Agency, AdvSetting, PdfProps } from "../types";
 const LetterPage = ({
   pdf,
   agency,
@@ -117,7 +117,7 @@ const LetterPage = ({
           ? cleanText(remplaceVariables(pdf.content, pdf, agency, advSetting))
           : ""}
       </Html>
-      <Footer agency={agency} advSetting={null} />
+      <Footer agency={agency} advSetting={advSetting} />
     </Page>
   );
 };
