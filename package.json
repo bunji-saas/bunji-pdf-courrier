@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "dev": "tsc --watch",
     "prepublishOnly": "yarn run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +20,7 @@
     "email": "valentin@bunji.fr"
   },
   "engines": {
-    "node": "18.17.1"
+    "node": "^18.17.1 || ^20.17.0"
   },
   "license": "ISC",
   "bugs": {
