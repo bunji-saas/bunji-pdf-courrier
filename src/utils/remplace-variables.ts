@@ -1,9 +1,9 @@
-import moment from 'moment'
+import moment from 'moment';
 
-import { courrierPropertyTypesOptions } from './property-types'
-import { Agency, AdvSetting, PdfProps } from '../types'
+import { AdvSetting, Agency, PdfProperties } from '../types';
+import { courrierPropertyTypesOptions } from './property-types';
 
-const roundUpToClosest10 = (number: number) => Math.round(number / 10) * 10
+const roundUpToClosest10 = (number: number) => Math.round(number / 10) * 10;
 
 export const getAdvSettingInfo = (agency: Agency, advSetting: AdvSetting | null) => {
   return {
@@ -18,18 +18,18 @@ export const getAdvSettingInfo = (agency: Agency, advSetting: AdvSetting | null)
     customAdvEndPages: advSetting?.customAdvEndPages || null,
     estimateLowText: advSetting?.estimateLowText || 'Estimation Basse',
     estimateHighText: advSetting?.estimateHighText || 'Estimation Haute',
-  }
-}
+  };
+};
 
 export const remplaceVariables = (
   text: string,
-  pdf: PdfProps,
+  pdf: PdfProperties,
   agency: Agency,
   advSetting: AdvSetting | null,
 ) => {
-  let replacedVariables = text
+  let replacedVariables = text;
 
-  const advSettingsInfo = getAdvSettingInfo(agency, advSetting)
+  const advSettingsInfo = getAdvSettingInfo(agency, advSetting);
 
   replacedVariables = replacedVariables
     .replace(/{{client_prenom}}/g, pdf.toFirstName || '')
@@ -59,12 +59,12 @@ export const remplaceVariables = (
       courrierPropertyTypesOptions
         .find((prop: any) => prop.value === pdf.propertyType)
         ?.label.toLocaleLowerCase() || '',
-    )
+    );
 
-  return replacedVariables
-}
+  return replacedVariables;
+};
 
 export const cleanText = (text: string) => {
-  const newText = text.replace(/\s+,+/g, ',').replace(/\s+\./g, '.')
-  return newText
-}
+  const newText = text.replace(/\s+,+/g, ',').replace(/\s+\./g, '.');
+  return newText;
+};

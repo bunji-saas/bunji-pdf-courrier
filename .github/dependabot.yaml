@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Set update schedule for GitHub Actions
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      # Check for updates to GitHub Actions every week
+      interval: 'weekly'
+    assignees:
+      - 'BenjD90'
+    commit-message:
+      prefix: 'github-actions: '
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    assignees:
+      - 'chrisbag'
+    commit-message:
+      prefix: 'yarn: '

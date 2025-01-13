@@ -1,3 +1,3 @@
-export { default as Agency } from "./Agency"
-export { default as AdvSetting } from "./AdvSetting"
-export { default as PdfProps } from "./PdfProps"
+export * from './adv-setting';
+export * from './agency';
+export * from './pdf-properties';

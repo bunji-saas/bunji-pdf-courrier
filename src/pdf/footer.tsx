@@ -1,12 +1,8 @@
-import React from "react";
-import { useMemo } from "react";
-import { View, Text, Image, StyleSheet, Font } from "@react-pdf/renderer";
-import { Agency, AdvSetting } from "../types";
+import React, { useMemo } from 'react';
+import { View, Text, Image, StyleSheet } from '@react-pdf/renderer';
+import { Agency, AdvSetting } from '../types';
 
-export const getAdvSettingInfo = (
-  agency: Agency,
-  advSetting: AdvSetting | null
-) => {
+export const getAdvSettingInfo = (agency: Agency, advSetting: AdvSetting | null) => {
   return {
     agencyName: advSetting?.agencyName || agency.name,
     agencyAddress: advSetting?.agencyAddress || agency.address,
@@ -17,8 +13,8 @@ export const getAdvSettingInfo = (
     agencyColour: advSetting?.agencyColour || agency.colour,
     customAdvStartPages: advSetting?.customAdvStartPages || null,
     customAdvEndPages: advSetting?.customAdvEndPages || null,
-    estimateLowText: advSetting?.estimateLowText || "Estimation Basse",
-    estimateHighText: advSetting?.estimateHighText || "Estimation Haute",
+    estimateLowText: advSetting?.estimateLowText || 'Estimation Basse',
+    estimateHighText: advSetting?.estimateHighText || 'Estimation Haute',
   };
 };
 
@@ -33,9 +29,9 @@ const Footer = ({ agency, advSetting }: Props) => {
     useMemo(
       () =>
         StyleSheet.create({
-          col4: { width: "25%" },
-          col8: { width: "75%" },
-          col6: { width: "50%" },
+          col4: { width: '25%' },
+          col8: { width: '75%' },
+          col6: { width: '50%' },
           mb4: { marginBottom: 4 },
           mb8: { marginBottom: 8 },
           mb40: { marginBottom: 40 },
@@ -45,13 +41,13 @@ const Footer = ({ agency, advSetting }: Props) => {
           body2: { fontSize: 9 },
           subtitle1: { fontSize: 10, fontWeight: 700 },
           subtitle2: { fontSize: 9, fontWeight: 700 },
-          alignRight: { textAlign: "right" },
+          alignRight: { textAlign: 'right' },
           page: {
             fontSize: 9,
             lineHeight: 1.6,
-            fontFamily: "Helvetica",
-            backgroundColor: "#FFFFFF",
-            padding: "40px 40px 120px 40px",
+            fontFamily: 'Helvetica',
+            backgroundColor: '#FFFFFF',
+            padding: '40px 40px 120px 40px',
           },
           footer: {
             left: 0,
@@ -61,18 +57,18 @@ const Footer = ({ agency, advSetting }: Props) => {
             paddingBottom: 12,
             paddingLeft: 24,
             paddingRight: 24,
-            margin: "auto",
+            margin: 'auto',
             borderTopWidth: 1,
-            borderStyle: "solid",
-            position: "absolute",
-            borderColor: "#DFE3E8",
+            borderStyle: 'solid',
+            position: 'absolute',
+            borderColor: '#DFE3E8',
           },
           gridContainer: {
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: 'row',
+            justifyContent: 'space-between',
           },
         }),
-      []
+      [],
     );
 
   const styles = useStyles();
@@ -83,7 +79,7 @@ const Footer = ({ agency, advSetting }: Props) => {
         {advSettingInfo?.agencyLogo && (
           <Image
             source={advSettingInfo.agencyLogo}
-            style={{ height: 40, objectFit: "scale-down" }}
+            style={{ height: 40, objectFit: 'scale-down' }}
           />
         )}
       </View>

@@ -8,7 +8,10 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "prepublishOnly": "yarn run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write . | grep -v \" (unchanged)\" | cat",
+    "lint": "eslint \"{src,test}/**/*.ts\" && prettier --check .",
+    "lint:apply": "eslint \"{src,test}/**/*.ts\" --fix && prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -29,7 +32,13 @@
   "homepage": "https://github.com/bunji-saas/bunji-pdf-courrier#readme",
   "devDependencies": {
     "@types/node": "^20.14.10",
-    "typescript": "^5.5.3"
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.19.1"
   },
   "dependencies": {
     "@react-pdf/renderer": "^3.4.4",

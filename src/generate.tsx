@@ -1,18 +1,19 @@
 // index.js
-import React from "react";
-import { Document } from "@react-pdf/renderer";
-import LetterPage from "./pdf/letterPage";
-import { AdvSetting, Agency, PdfProps } from './types'
+import { Document } from '@react-pdf/renderer';
+import React from 'react';
 
-interface PDFProps {
-  pdfs: PdfProps[];
+import LetterPage from './pdf/letterPage';
+import { AdvSetting, Agency, PdfProperties } from './types';
+
+export interface PDFCourrierOptions {
+  pdfs: PdfProperties[];
   agency: Agency;
   advSetting: AdvSetting | null;
 }
 
 const MemoDoc = React.memo(Document);
 
-const PDF = ({ pdfs, agency, advSetting }: PDFProps) => {
+const PDF = ({ pdfs, agency, advSetting }: PDFCourrierOptions) => {
   return (
     <MemoDoc>
       {pdfs.map((pdf, index) => (

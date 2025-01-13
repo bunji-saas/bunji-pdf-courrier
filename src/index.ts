@@ -1,3 +1,3 @@
-import PDF from './generate'
+import PDF from './generate';
 
-export default PDF
+export default PDF;

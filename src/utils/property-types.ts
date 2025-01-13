@@ -2,12 +2,12 @@
 // import assets from 'Config/assets'
 
 export const apartment: {
-  value: 'apartment'
-  label: string
-  labelShort: string
+  value: 'apartment';
+  label: string;
+  labelShort: string;
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'apartment',
   label: 'Appartement',
@@ -16,16 +16,16 @@ export const apartment: {
   // icon: assets.icons.apartment,
   emoticon: '🏬',
   colour: undefined,
-}
+};
 
 export const boat: {
-  value: 'boat'
-  label: string
-  labelShort: string
+  value: 'boat';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'boat',
   label: 'Bâteau',
@@ -33,16 +33,16 @@ export const boat: {
   // icon: assets.icons.office,
   emoticon: '🚢',
   colour: undefined,
-}
+};
 
 export const building: {
-  value: 'building'
-  label: string
-  labelShort: string
+  value: 'building';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'building',
   label: 'Immeuble',
@@ -50,16 +50,16 @@ export const building: {
   // icon: assets.icons.office,
   emoticon: '🏢',
   colour: undefined,
-}
+};
 
 export const basement: {
-  value: 'basement'
-  label: string
-  labelShort: string
+  value: 'basement';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'basement',
   label: 'Cave',
@@ -67,16 +67,16 @@ export const basement: {
   // icon: assets.icons.downstairs,
   emoticon: '🍷',
   colour: undefined,
-}
+};
 
 export const commercial: {
-  value: 'commercial'
-  label: string
-  labelShort: string
+  value: 'commercial';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'commercial',
   label: 'Local commercial',
@@ -84,16 +84,16 @@ export const commercial: {
   // icon: assets.icons.commercial,
   emoticon: '🛍',
   colour: undefined,
-}
+};
 
 export const house: {
-  value: 'house'
-  label: string
-  labelShort: string
+  value: 'house';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'house',
   label: 'Maison',
@@ -101,16 +101,16 @@ export const house: {
   // icon: assets.icons.house,
   emoticon: '🏠',
   colour: undefined,
-}
+};
 
 export const land: {
-  value: 'land'
-  label: string
-  labelShort: string
+  value: 'land';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'land',
   label: 'Terrain',
@@ -118,16 +118,16 @@ export const land: {
   // icon: assets.icons.land,
   emoticon: '🌳',
   colour: undefined,
-}
+};
 
 export const office: {
-  value: 'office'
-  label: string
-  labelShort: string
+  value: 'office';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'office',
   label: 'Bureau',
@@ -135,16 +135,16 @@ export const office: {
   // icon: assets.icons.office,
   emoticon: '🏢',
   colour: undefined,
-}
+};
 
 export const other: {
-  value: 'other'
-  label: string
-  labelShort: string
+  value: 'other';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'other',
   label: 'Autre',
@@ -152,15 +152,15 @@ export const other: {
   // icon: assets.icons.other,
   emoticon: '➕',
   colour: undefined,
-}
+};
 export const parking: {
-  value: 'parking'
-  label: string
-  labelShort: string
+  value: 'parking';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'parking',
   label: 'Parking',
@@ -168,16 +168,16 @@ export const parking: {
   // icon: assets.icons.parking,
   emoticon: '🅿️',
   colour: undefined,
-}
+};
 
 export const professional: {
-  value: 'professional'
-  label: string
-  labelShort: string
+  value: 'professional';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'professional',
   label: 'Boutique, Local, Bureau',
@@ -185,16 +185,16 @@ export const professional: {
   // icon: assets.icons.office,
   emoticon: '🏢',
   colour: undefined,
-}
+};
 
 export const store: {
-  value: 'store'
-  label: string
-  labelShort: string
+  value: 'store';
+  label: string;
+  labelShort: string;
 
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'store',
   label: 'Commerce',
@@ -202,15 +202,15 @@ export const store: {
   // icon: assets.icons.office,
   emoticon: '🛍',
   colour: undefined,
-}
+};
 
 export const warehouse: {
-  value: 'warehouse'
-  label: string
-  labelShort: string
+  value: 'warehouse';
+  label: string;
+  labelShort: string;
   // icon: string
-  emoticon: string
-  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined
+  emoticon: string;
+  colour: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info' | undefined;
 } = {
   value: 'warehouse',
   label: 'Entrepôt',
@@ -218,7 +218,7 @@ export const warehouse: {
   // icon: assets.icons.office,
   emoticon: '📦',
   colour: undefined,
-}
+};
 
 export const nullValue = {
   value: null,
@@ -226,7 +226,7 @@ export const nullValue = {
   // icon: assets.icons.downstairs,
   emoticon: '﹖',
   colour: undefined,
-}
+};
 
 export const others = {
   value: null,
@@ -235,9 +235,9 @@ export const others = {
   // icon: assets.icons.downstairs,
   emoticon: '🏡',
   colour: undefined,
-}
+};
 
-export const propertyTypes = [apartment, house, parking, land, commercial, office, basement] // did not include other not part of Project['type']
+export const propertyTypes = [apartment, house, parking, land, commercial, office, basement]; // did not include other not part of Project['type']
 // export const propertyTypesObj2 = mapKeys(propertyTypes, 'value')
 // export const propertyTypesObj = (
 //   type: Project['type'] | Listing['propertyType'] | 'terrain' | null,
@@ -273,8 +273,8 @@ export const propertyTypes = [apartment, house, parking, land, commercial, offic
 //   }
 // }
 
-export const types = [apartment, house, parking, other]
-export const otherTypes = [land, commercial, office, basement]
+export const types = [apartment, house, parking, other];
+export const otherTypes = [land, commercial, office, basement];
 
 export const propertyTypesInclOthers = [
   apartment,
@@ -285,7 +285,7 @@ export const propertyTypesInclOthers = [
   commercial,
   office,
   basement,
-]
+];
 
 export const buyerPropertyOptions = [
   apartment,
@@ -301,9 +301,9 @@ export const buyerPropertyOptions = [
   warehouse,
   boat,
   other,
-]
+];
 
-export const rentalPropertyOptions = buyerPropertyOptions
+export const rentalPropertyOptions = buyerPropertyOptions;
 
 export const courrierPropertyTypesOptions = [
   apartment,
@@ -319,6 +319,6 @@ export const courrierPropertyTypesOptions = [
   warehouse,
   boat,
   //other,
-]
+];
 
-export const estimationRentalsPropertyTypes = [apartment, house]
+export const estimationRentalsPropertyTypes = [apartment, house];

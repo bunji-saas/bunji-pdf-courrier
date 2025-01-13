@@ -7,10 +7,11 @@ export const civilityOptions = [
   { value: 'succession', label: 'Succession' },
   { value: 'madams', label: 'Mesdames' },
   { value: 'sirs', label: 'Messieurs' },
-]
+];
 
 export const createFullName = (
-  toCivility: 'mister'
+  toCivility:
+    | 'mister'
     | 'miss'
     | 'mister-and-miss'
     | 'company'
@@ -22,40 +23,40 @@ export const createFullName = (
   toFirstName: string | null,
   toLastName: string | null,
 ) => {
-  let fullName = ''
+  let fullName = '';
 
   if (toCivility) {
-    fullName += `${civilityOptions.find((option) => option.value === toCivility)?.label} `
+    fullName += `${civilityOptions.find((option) => option.value === toCivility)?.label} `;
   }
 
   if (toFirstName) {
-    fullName += `${toFirstName} `
+    fullName += `${toFirstName} `;
   }
 
   if (toLastName) {
-    fullName += toLastName
+    fullName += toLastName;
   }
 
   if (!fullName) {
-    return ''
+    return '';
   }
 
-  return fullName.trim()
-}
+  return fullName.trim();
+};
 
 export const grey = {
-  50: "#fafafa",
-  100: "#f5f5f5",
-  200: "#eeeeee",
-  300: "#e0e0e0",
-  400: "#bdbdbd",
-  500: "#9e9e9e",
-  600: "#757575",
-  700: "#616161",
-  800: "#424242",
-  900: "#212121",
-  A100: "#f5f5f5",
-  A200: "#eeeeee",
-  A400: "#bdbdbd",
-  A700: "#616161",
-}
+  50: '#fafafa',
+  100: '#f5f5f5',
+  200: '#eeeeee',
+  300: '#e0e0e0',
+  400: '#bdbdbd',
+  500: '#9e9e9e',
+  600: '#757575',
+  700: '#616161',
+  800: '#424242',
+  900: '#212121',
+  A100: '#f5f5f5',
+  A200: '#eeeeee',
+  A400: '#bdbdbd',
+  A700: '#616161',
+};
