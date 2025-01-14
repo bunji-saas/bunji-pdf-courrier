@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write . | grep -v \" (unchanged)\" | cat",
     "lint": "eslint \"{src,test}/**/*.ts\" && prettier --check .",
-    "lint:apply": "eslint \"{src,test}/**/*.ts\" --fix && prettier --check ."
+    "lint:apply": "eslint \"{src,test}/**/*.ts\" --fix && prettier --check .",
+    "release": "release-it"
   },
   "engines": {
     "node": "^18.17.1 || ^20.17.0"
@@ -24,6 +25,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "prettier": "^3.4.2",
+    "release-it": "^18.1.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.19.1"
   },
@@ -36,5 +38,8 @@
     "process": "^0.11.10",
     "react": "^18.3.1",
     "react-pdf-html": "^2.0.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
