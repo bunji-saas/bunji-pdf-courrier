@@ -2,7 +2,7 @@ import { Page, StyleSheet, Text, View } from '@react-pdf/renderer';
 import React, { useMemo } from 'react';
 import Html from 'react-pdf-html';
 
-import { AdvSetting, Agency, PdfProperties } from '../types';
+import { AdvSetting, Agency, PdfProperties, StyleOptions } from '../types';
 import { cleanText, remplaceVariables } from '../utils/remplace-variables';
 import { createFullName, grey } from '../utils/tool';
 import Footer from './footer';
@@ -11,10 +11,12 @@ const LetterPage = ({
   pdf,
   agency,
   advSetting,
+  styleOptions,
 }: {
   pdf: PdfProperties;
   agency: Agency;
   advSetting: AdvSetting | null;
+  styleOptions?: StyleOptions;
 }) => {
   const useStyles = () =>
     useMemo(
@@ -49,7 +51,7 @@ const LetterPage = ({
             textAlign: 'left',
             lineHeight: 1.6,
             right: 28,
-            backgroundColor: grey[200],
+            backgroundColor: styleOptions?.addressBox?.backgroundGrey ? grey[200] : 'initial',
 
             // ...(variant === 'preview' && { backgroundColor: grey[200] }),
             borderRadius: '8px',
