@@ -1,6 +1,6 @@
 {
   "name": "pdf-courrier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Package pdf-courrier",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
