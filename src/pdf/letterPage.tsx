@@ -5,7 +5,7 @@ import Html from 'react-pdf-html';
 import { PDFCourrierOptions } from '../generate';
 import { PdfProperties } from '../types';
 import { cleanText, replaceVariablesInTemplate } from '../utils/remplace-variables-in-template';
-import { createFullName, grey } from '../utils/tool';
+import { createFullName } from '../utils/tool';
 import Footer from './footer';
 
 const LetterPage = ({
@@ -49,9 +49,7 @@ const LetterPage = ({
             textAlign: 'left',
             lineHeight: 1.6,
             right: 28,
-            backgroundColor: styleOptions?.addressBox?.backgroundGrey ? grey[200] : 'initial',
-
-            // ...(variant === 'preview' && { backgroundColor: grey[200] }),
+            backgroundColor: styleOptions?.addressBox?.backgroundGrey ? '#eeeeee' : '#ffffff',
             borderRadius: '8px',
             zIndex: 0,
           },
