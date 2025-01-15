@@ -1,32 +1,25 @@
-export const civilityOptions = [
-  { value: 'miss', label: 'Madame' },
-  { value: 'mister', label: 'Monsieur' },
-  { value: 'mister-and-miss', label: 'Monsieur et Madame' },
-  { value: 'company', label: 'Société' },
-  { value: 'indivision', label: 'Indivision' },
-  { value: 'succession', label: 'Succession' },
-  { value: 'madams', label: 'Mesdames' },
-  { value: 'sirs', label: 'Messieurs' },
-];
+import { Civility } from '../types';
+
+export const civilityLabels: Record<Civility, string> = {
+  miss: 'Madame',
+  mister: 'Monsieur',
+  'mister-and-miss': 'Monsieur et Madame',
+  company: 'Société',
+  indivision: 'Indivision',
+  succession: 'Succession',
+  madams: 'Mesdames',
+  sirs: 'Messieurs',
+};
 
 export const createFullName = (
-  toCivility:
-    | 'mister'
-    | 'miss'
-    | 'mister-and-miss'
-    | 'company'
-    | 'indivision'
-    | 'sirs'
-    | 'madams'
-    | 'succession'
-    | null,
-  toFirstName: string | null,
-  toLastName: string | null,
+  toCivility?: Civility,
+  toFirstName?: string,
+  toLastName?: string,
 ) => {
   let fullName = '';
 
   if (toCivility) {
-    fullName += `${civilityOptions.find((option) => option.value === toCivility)?.label} `;
+    fullName += `${civilityLabels[toCivility]} `;
   }
 
   if (toFirstName) {

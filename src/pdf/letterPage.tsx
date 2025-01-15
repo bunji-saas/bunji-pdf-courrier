@@ -2,22 +2,20 @@ import { Page, StyleSheet, Text, View } from '@react-pdf/renderer';
 import React, { useMemo } from 'react';
 import Html from 'react-pdf-html';
 
-import { AdvSetting, Agency, PdfProperties, StyleOptions } from '../types';
-import { cleanText, remplaceVariables } from '../utils/remplace-variables';
+import { PDFCourrierOptions } from '../generate';
+import { PdfProperties } from '../types';
+import { cleanText, replaceVariablesInTemplate } from '../utils/remplace-variables-in-template';
 import { createFullName, grey } from '../utils/tool';
 import Footer from './footer';
 
 const LetterPage = ({
   pdf,
-  agency,
   advSetting,
   styleOptions,
 }: {
   pdf: PdfProperties;
-  agency: Agency;
-  advSetting: AdvSetting | null;
-  styleOptions?: StyleOptions;
-}) => {
+} & Required<Pick<PDFCourrierOptions, 'advSetting'>> &
+  Pick<PDFCourrierOptions, 'styleOptions'>) => {
   const useStyles = () =>
     useMemo(
       () =>
@@ -114,9 +112,9 @@ const LetterPage = ({
           '.ql-align-right': { textAlign: 'right' },
         }}
       >
-        {pdf.content ? cleanText(remplaceVariables(pdf.content, pdf, agency, advSetting)) : ''}
+        {cleanText(replaceVariablesInTemplate(pdf.content, pdf, advSetting))}
       </Html>
-      <Footer agency={agency} advSetting={advSetting} />
+      <Footer advSetting={advSetting} />
     </Page>
   );
 };

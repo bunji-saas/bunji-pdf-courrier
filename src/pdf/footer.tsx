@@ -1,30 +1,13 @@
+import { Image, StyleSheet, Text, View } from '@react-pdf/renderer';
 import React, { useMemo } from 'react';
-import { View, Text, Image, StyleSheet } from '@react-pdf/renderer';
-import { Agency, AdvSetting } from '../types';
 
-export const getAdvSettingInfo = (agency: Agency, advSetting: AdvSetting | null) => {
-  return {
-    agencyName: advSetting?.agencyName || agency.name,
-    agencyAddress: advSetting?.agencyAddress || agency.address,
-    agencyZipCode: advSetting?.agencyZipCode || agency.zipCode,
-    agencyCity: advSetting?.agencyCity || agency.city,
-    agencyWebsite: advSetting?.agencyWebsite || agency.website,
-    agencyLogo: advSetting?.agencyLogo || agency.logo,
-    agencyColour: advSetting?.agencyColour || agency.colour,
-    customAdvStartPages: advSetting?.customAdvStartPages || null,
-    customAdvEndPages: advSetting?.customAdvEndPages || null,
-    estimateLowText: advSetting?.estimateLowText || 'Estimation Basse',
-    estimateHighText: advSetting?.estimateHighText || 'Estimation Haute',
-  };
-};
+import { AdvSetting } from '../types';
 
 type Props = {
-  agency: Agency;
-  advSetting: AdvSetting | null;
+  advSetting: AdvSetting;
 };
 
-const Footer = ({ agency, advSetting }: Props) => {
-  const advSettingInfo = getAdvSettingInfo(agency, advSetting);
+const Footer = ({ advSetting }: Props) => {
   const useStyles = () =>
     useMemo(
       () =>
@@ -76,18 +59,15 @@ const Footer = ({ agency, advSetting }: Props) => {
   return (
     <View style={[styles.gridContainer, styles.footer]} fixed>
       <View>
-        {advSettingInfo?.agencyLogo && (
-          <Image
-            source={advSettingInfo.agencyLogo}
-            style={{ height: 40, objectFit: 'scale-down' }}
-          />
+        {advSetting?.agencyLogo && (
+          <Image source={advSetting.agencyLogo} style={{ height: 40, objectFit: 'scale-down' }} />
         )}
       </View>
       <View style={[styles.col4, styles.alignRight]}>
-        <Text style={styles.subtitle2}>{advSettingInfo.agencyName}</Text>
-        <Text>{advSettingInfo.agencyAddress}</Text>
+        <Text style={styles.subtitle2}>{advSetting.agencyName}</Text>
+        <Text>{advSetting.agencyAddress}</Text>
         <Text>
-          {advSettingInfo.agencyZipCode} {advSettingInfo.agencyCity}
+          {advSetting.agencyZipCode} {advSetting.agencyCity}
         </Text>
       </View>
     </View>

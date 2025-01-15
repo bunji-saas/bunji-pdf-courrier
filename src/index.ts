@@ -1,3 +1,2 @@
-import PDF from './generate';
-
-export default PDF;
+export * from './generate';
+export * from './types';
