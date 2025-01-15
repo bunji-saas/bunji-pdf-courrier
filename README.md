@@ -1,3 +1,7 @@
+# Moved to https://gitlab.com/bunji-saas/libs/pdf-courriers
+
+----
+
 # bunji-pdf-courrier
 
 Create letters the way we like them
