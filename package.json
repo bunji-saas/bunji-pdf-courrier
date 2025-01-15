@@ -1,7 +1,6 @@
 {
-  "name": "pdf-courrier",
+  "name": "pdf-courriers",
   "version": "0.0.2",
-  "description": "Package pdf-courrier",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -20,7 +19,7 @@
   "engines": {
     "node": "^18.17.1 || ^20.17.0"
   },
-  "license": "ISC",
+  "license": "AGPL-3.0",
   "devDependencies": {
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
