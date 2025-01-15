@@ -1,5 +1,7 @@
-// index.js
-import { Document } from '@react-pdf/renderer';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import * as ReactPDFLayout from '@react-pdf/layout';
+import * as ReactPDF from '@react-pdf/renderer';
 import React from 'react';
 
 import LetterPage from './pdf/letterPage';
@@ -31,7 +33,7 @@ export function getAdvSettingWithDefaultValues(
   };
 }
 
-const MemoDoc = React.memo(Document);
+const MemoDoc = React.memo(ReactPDF.Document);
 
 export function generatePDFElement({ pdfs, agency, advSetting, styleOptions }: PDFCourrierOptions) {
   const advSettingsWithDefaultValues = getAdvSettingWithDefaultValues(advSetting, agency);
@@ -49,4 +51,21 @@ export function generatePDFElement({ pdfs, agency, advSetting, styleOptions }: P
       ))}
     </MemoDoc>
   );
+}
+
+export async function generatePDFtoBuffer(pdfCourrierOptions: PDFCourrierOptions) {
+  return await ReactPDF.renderToBuffer(generatePDFElement(pdfCourrierOptions));
+}
+
+export async function generatePDFtoStream(pdfCourrierOptions: PDFCourrierOptions) {
+  return await ReactPDF.renderToStream(generatePDFElement(pdfCourrierOptions));
+}
+
+export async function countNbPages(pdfCourrierOptions: PDFCourrierOptions) {
+  const pdfDocument = generatePDFElement(pdfCourrierOptions);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+  const layout = (await ReactPDFLayout.default(ReactPDF.pdf(pdfDocument).container.document)) as {
+    children: { type: string }[];
+  };
+  return layout.children.filter((child) => child.type === 'PAGE').length;
 }

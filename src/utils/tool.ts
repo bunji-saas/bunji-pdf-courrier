@@ -12,9 +12,9 @@ export const civilityLabels: Record<Civility, string> = {
 };
 
 export const createFullName = (
-  toCivility?: Civility,
-  toFirstName?: string,
-  toLastName?: string,
+  toCivility?: Civility | null,
+  toFirstName?: string | null,
+  toLastName?: string | null,
 ) => {
   let fullName = '';
 

@@ -3,12 +3,12 @@ import dayjs from 'dayjs';
 import { AdvSetting, PdfProperties } from '../types';
 import { courrierPropertyTypesLabels } from './property-types';
 
-function roundUpToClosest10(value: number | undefined) {
+function roundUpToClosest10(value: number | undefined | null) {
   if (!value) return;
   return Math.round(value / 10) * 10;
 }
 
-function replace(text: string, replacementValues: [string, string | undefined][]) {
+function replace(text: string, replacementValues: [string, string | undefined | null][]) {
   let result: string = text;
   for (const replacementValue of replacementValues) {
     result = result.replaceAll(`{{${replacementValue[0]}}}`, replacementValue[1] || '');
@@ -17,7 +17,7 @@ function replace(text: string, replacementValues: [string, string | undefined][]
 }
 
 export function replaceVariablesInTemplate(
-  text: string | undefined,
+  text: string | undefined | null,
   pdf: PdfProperties,
   advSetting: AdvSetting,
 ) {

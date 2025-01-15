@@ -1,9 +1,9 @@
 export interface User {
-  firstname?: string;
-  lastname?: string;
-  email?: string;
-  telMobile?: string;
-  title?: string;
+  firstname?: string | null;
+  lastname?: string | null;
+  email?: string | null;
+  telMobile?: string | null;
+  title?: string | null;
 }
 
 export type Civility =
@@ -30,16 +30,16 @@ export type PropertyTypeForCourrier =
   | 'store';
 
 export interface PdfProperties {
-  content?: string;
-  toCivility?: Civility;
-  toFirstName?: string;
-  toLastName?: string;
-  toAddressLine1?: string;
-  toAddressLine2?: string;
-  toCity?: string;
-  toZipCode?: string;
-  toCountry?: string;
-  sender?: User;
-  surface?: number;
-  propertyType?: PropertyTypeForCourrier;
+  content?: string | null;
+  toCivility?: Civility | null;
+  toFirstName?: string | null;
+  toLastName?: string | null;
+  toAddressLine1?: string | null;
+  toAddressLine2?: string | null;
+  toCity?: string | null;
+  toZipCode?: string | null;
+  toCountry?: string | null;
+  sender?: User | null;
+  surface?: number | null;
+  propertyType?: PropertyTypeForCourrier | null;
 }
