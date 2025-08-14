@@ -1,6 +1,6 @@
 node_modules/
 lib/
-dist/
+
 .gitlab-ci-local
 coverage
 
