@@ -1,0 +1,69 @@
+image: node:22.13-bookworm
+
+stages:
+  - install
+  - test
+  - build
+
+.default_rules:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - when: on_success
+
+# src : https://docs.gitlab.com/ee/ci/caching/#compute-the-cache-key-from-the-lock-file
+yarn-install:
+  stage: install
+  script:
+    - echo 'yarn-offline-mirror ".yarn-cache/"' >> .yarnrc
+    - echo 'yarn-offline-mirror-pruning true' >> .yarnrc
+    - yarn install --frozen-lockfile --production=false
+  rules:
+    - !reference [.default_rules, rules]
+  cache:
+    key:
+      files:
+        - yarn.lock
+    paths:
+      - .yarn-cache/
+      - node_modules
+  artifacts:
+    expire_in: 1 days
+    when: on_success
+    paths:
+      - node_modules/
+
+lint:
+  stage: test
+  needs:
+    - yarn-install
+  script:
+    - yarn lint
+  rules:
+    - !reference [.default_rules, rules]
+
+build:
+  stage: build
+  needs:
+    - yarn-install
+  script:
+    - yarn build
+  rules:
+    - !reference [.default_rules, rules]
+
+test:
+  stage: test
+  needs:
+    - yarn-install
+  script:
+    - yarn test:ci
+  rules:
+    - !reference [.default_rules, rules]
+  artifacts: # src : https://docs.gitlab.com/ee/ci/testing/unit_test_report_examples.html#jest
+    when: always
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml
+      junit:
+        - ./coverage/junit.xml
+  coverage: '/All files[^\|]*\|[^\|]*\s+([\d\.]+)/'

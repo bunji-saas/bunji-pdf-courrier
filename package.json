@@ -1,0 +1,65 @@
+{
+  "name": "pdf-courriers",
+  "version": "0.7.0",
+  "main": "dist/node/index.js",
+  "browser": "dist/react/index.js",
+  "types": "dist/node/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/node/index.d.ts",
+      "import": "./dist/react/index.js",
+      "default": "./dist/node/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && yarn run build:node && yarn run build:react",
+    "build:react": "tsc",
+    "build:node": "esbuild 'src/**/*.ts*' --outdir=dist/node --platform=node --format=cjs && tsc --emitDeclarationOnly --outDir dist/node",
+    "prepublishOnly": "yarn run build",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose",
+    "test:dev": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch",
+    "test:ci": "NODE_OPTIONS=--experimental-vm-modules jest --config jest-ci.config.ts",
+    "format": "prettier --write . | grep -v \" (unchanged)\" | cat",
+    "lint": "tsc && eslint \"{src,test}/**/*.ts\" && prettier --check .",
+    "lint:apply": "eslint \"{src,test}/**/*.ts\" --fix && prettier --check .",
+    "release": "release-it"
+  },
+  "engines": {
+    "node": "^22.13.0"
+  },
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.12.0",
+    "@types/pdf-parse": "^1.1.4",
+    "@types/react": "^19.0.8",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "pdfjs-dist": "^4.10.38",
+    "prettier": "^3.4.2",
+    "release-it": "^18.1.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.22.0"
+  },
+  "dependencies": {
+    "@react-pdf/layout": "^4.2.0",
+    "@react-pdf/renderer": "^4.1.6",
+    "dayjs": "^1.11.13",
+    "react": "^19.1.1",
+    "react-pdf-html": "^2.1.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}

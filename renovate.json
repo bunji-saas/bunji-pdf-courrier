@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "baseBranches": ["develop"],
+  "prHourlyLimit": 30,
+  "commitMessagePrefix": "DEV-579"
+}
