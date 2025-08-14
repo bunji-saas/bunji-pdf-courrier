@@ -1,6 +1,6 @@
 {
   "name": "pdf-courriers",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "main": "dist/node/index.js",
   "browser": "dist/react/index.js",
   "types": "dist/node/index.d.ts",
